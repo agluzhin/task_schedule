@@ -59,16 +59,29 @@ class Queue:
         else:
             return f"\n{self.LinkedList.head}\n"
 
+    def delete(self):
+        self.LinkedList.head = None
+        self.LinkedList.tail = None
 
+
+# Create a schedule (queue)
 schedule = Queue()
+
+# Add some tasks (nodes) in schedule
 schedule.enqueue(Node("1) Start learning basic syntax of Python"))
 schedule.enqueue(Node("2) Then look through data structures and algorithms"))
 schedule.enqueue(Node("3) Search other advanced topics"))
 print(schedule)
 
+# Delete first task
 schedule.dequeue()
 
+# Show the main (first) task in schedule
 main_topic = schedule.peek()
 print(main_topic)
 
+print(schedule)
+
+# Clean all queue
+schedule.delete()
 print(schedule)
