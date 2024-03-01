@@ -42,7 +42,7 @@ class Queue:
             self.LinkedList.tail = new_node
 
     def dequeue(self):
-        if self.LinkedList.head is None:
+        if self.isEmpty():
             return "Queue is empty"
         else:
             temp_node = self.LinkedList.head
@@ -54,7 +54,7 @@ class Queue:
             return temp_node
 
     def peek(self):
-        if self.LinkedList.head is None:
+        if self.isEmpty():
             return "Queue is empty"
         else:
             return f"\n{self.LinkedList.head}\n"
